@@ -1,0 +1,11 @@
+{% extends "apply/layout.html" %}
+{% block body %}
+    <h1>Astronaut Application</h1>
+    <h3>Do you have what it takes to go to space? Apply now and find out!</h3>
+    <form action="{% url 'apply:result' %}" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit">
+    </form>
+    <a href="{% url 'apply:result' %}">View Previous Application Result</a>
+{% endblock body %}

@@ -1,0 +1,7 @@
+{% extends "apply/layout.html" %}
+{% block body %}
+    <h2>Your Application Result: </h2>
+    <h1>{{ result }}</h1>
+    <h3>{{ subheading }}</h3>
+    <a href="{% url 'apply:index' %}">Submit Another Application</a>
+{% endblock body %}
